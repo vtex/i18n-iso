@@ -18,7 +18,7 @@ import { Options } from "./types";
  *
  * ### @example
  * ```tsx
- * import { getLocaleByIETFLanguageTag, Locale } from `@marcelovicentegc/i18n-iso-languages`
+ * import { getLocaleByIETFLanguageTag, Locale } from `@vtex/i18n-iso`
  *
  * const locale: Locale | undefined = getLocaleByIETFLanguageTag("pt-BR")
  * const locales: Locale[] = getLocaleByIETFLanguageTag(["pt-BR", "pt-PT"])
@@ -44,7 +44,7 @@ export function getLocaleByIETFLanguageTag(
  *
  * ### @example
  * ```tsx
- * import { getLocalesByOfficialLanguage } from `@marcelovicentegc/i18n-iso-languages`
+ * import { getLocalesByOfficialLanguage } from `@vtex/i18n-iso`
  *
  * const locales = getLocalesByOfficialLanguage("Portuguese")
  * const moreLocales = getLocalesByOfficialLanguage(["Portuguese", "Japanese", "Russian"])
@@ -68,7 +68,7 @@ export function getLocalesByOfficialLanguage(
  *
  * ### @example
  * ```tsx
- * import { getlocaleByRegion } from `@marcelovicentegc/i18n-iso-languages`
+ * import { getlocaleByRegion } from `@vtex/i18n-iso`
  *
  * const locale = getlocaleByRegion("Austria")
  * const locales = getLocaleByRegion(["Austria", "South Korea"])
@@ -103,7 +103,7 @@ export function getLocaleByRegion(
  *
  * ### @example
  * ```tsx
- * import { getLocaleByISO31661Alpha2 } from `@marcelovicentegc/i18n-iso-languages`
+ * import { getLocaleByISO31661Alpha2 } from `@vtex/i18n-iso`
  *
  * const locale = getLocaleByISO31661Alpha2("IT")
  * const locales = getLocaleByISO31661Alpha2(["IT", "EG", "RO"])
@@ -132,7 +132,7 @@ export function getLocaleByISO31661Alpha2(
  *
  * ### @example
  * ```tsx
- * import { getLocalesByISO6391 } from `@marcelovicentegc/i18n-iso-languages`
+ * import { getLocalesByISO6391 } from `@vtex/i18n-iso`
  *
  * const locales = getLocalesByISO6391("pt") // returns both Brazilian Portuguese and Portuguese.
  * const moreLocales = getLocalesByISO6391(["fr", "en", "pt"])

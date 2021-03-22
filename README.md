@@ -1,18 +1,16 @@
 <p align="center">
-  <img alt="i18n-iso-languages logo" src="assets/globe.png" height="300" />
-  <h3 align="center">@marcelovicentegc/i18n-iso-languages</h3>
+  <img alt="i18n-iso logo" src="assets/vtex-logo.svg" height="200" />
+  <h3 align="center">@vtex/i18n-iso</h3>
   <p align="center">Flexible, future proof and easy to use localization library based on the ISO language set standards</p>
 </p>
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40marcelovicentegc%2Fi18n-iso-languages.svg)](https://badge.fury.io/js/%40marcelovicentegc%2Fi18n-iso-languages) [![Playground](https://img.shields.io/badge/-Play%20with%20it%20%20on%20it's%20playground!-success)](https://marcelovicentegc.github.io/i18n-iso-languages)
-
 ## Installation
 
-> yarn add @marcelovicentegc/i18n-iso-languages
+> yarn add @vtex/i18n-iso
 
-> npm i @marcelovicentegc/i18n-iso-languages
+> npm i @vtex/i18n-iso
 
 ## Compliance
 
@@ -80,17 +78,17 @@
 
 ## Usage
 
-You can play with this package on it's [playground](https://marcelovicentegc.github.io/i18n-iso-languages/)
+You can play with this package on it's [playground](https://vtex.github.io/i18n-iso-languages/)
 
 > ### Summary
 >
 > - getters
->   - [getLocaleByIETFLanguageTag](https://github.com/marcelovicentegc/i18n-iso-languages#getlocalebyietflanguagetag)
->   - [getLocalesByOfficialLanguage](https://github.com/marcelovicentegc/i18n-iso-languages#getlocalesbyofficiallanguage)
->   - [getLocaleByRegion](https://github.com/marcelovicentegc/i18n-iso-languages#getlocalebyregion)
->   - [getLocaleByISO31661Alpha2](https://github.com/marcelovicentegc/i18n-iso-languages#getlocalebyiso31661alpha2)
+>   - [getLocaleByIETFLanguageTag](https://github.com/vtex/i18n-iso#getlocalebyietflanguagetag)
+>   - [getLocalesByOfficialLanguage](https://github.com/vtex/i18n-iso#getlocalesbyofficiallanguage)
+>   - [getLocaleByRegion](https://github.com/vtex/i18n-iso#getlocalebyregion)
+>   - [getLocaleByISO31661Alpha2](https://github.com/vtex/i18n-iso#getlocalebyiso31661alpha2)
 > - configuration
->   - [configure](https://github.com/marcelovicentegc/i18n-iso-languages#configure)
+>   - [configure](https://github.com/vtex/i18n-iso#configure)
 
 **Note on the getters**
 
@@ -103,7 +101,7 @@ interface Options {
 ```
 
 - tryFallback
-  - If this option is set to true, it will fallback to the default locale in case it doesn't find a locale or any of the locales you're looking for. The default locale is `en-US`, but you can override this with the [configure](https://github.com/marcelovicentegc/i18n-iso-languages#configure) method.
+  - If this option is set to true, it will fallback to the default locale in case it doesn't find a locale or any of the locales you're looking for. The default locale is `en-US`, but you can override this with the [configure](https://github.com/vtex/i18n-iso#configure) method.
 
 Every getter has the following type signature:
 
@@ -112,41 +110,41 @@ Every getter has the following type signature:
 | `language`           | `string` or `string[]` | Key used to find the locale or locales you need | -                        |
 | `options` (optional) | `Options`              | Gives you the ability to control some behavior  | `{ tryFallback: false }` |
 
-In case you give a non existent `language` input, or a `language` input that is not present on the [locales subset](https://github.com/marcelovicentegc/i18n-iso-languages#configure) (if that was set),
+In case you give a non existent `language` input, or a `language` input that is not present on the [locales subset](https://github.com/vtex/i18n-iso#configure) (if that was set),
 you will not be able to get it's locale. In case you give an array of languages as input and some of them either doesn't exist or are not on the locales subset, you will still receive an array of the locales found as output.
 
-### [getLocaleByIETFLanguageTag](https://marcelovicentegc.github.io/i18n-iso-languages/#getLocaleByIETFLanguageTag)
+### [getLocaleByIETFLanguageTag](https://vtex.github.io/i18n-iso-languages/#getLocaleByIETFLanguageTag)
 
 Get a single or multiple locale objects by IETF language tag.
 
 #### Example usage
 
 ```tsx
-import { getLocaleByIETFLanguageTag } from `@marcelovicentegc/i18n-iso-languages`;
+import { getLocaleByIETFLanguageTag } from `@vtex/i18n-iso`;
 
 const locale = getLocaleByIETFLanguageTag("pt-BR");
 
 const locales = getLocaleByIETFLanguageTag(["pt-BR", "pt-PT", "en-US"]);
 ```
 
-### [getLocalesByOfficialLanguage](https://marcelovicentegc.github.io/i18n-iso-languages/#getLocalesByOfficialLanguage)
+### [getLocalesByOfficialLanguage](https://vtex.github.io/i18n-iso-languages/#getLocalesByOfficialLanguage)
 
 Get locales object by official language.
 
 ```tsx
-import { getLocalesByOfficialLanguage } from `@marcelovicentegc/i18n-iso-languages`;
+import { getLocalesByOfficialLanguage } from `@vtex/i18n-iso`;
 
 const locales = getLocalesByOfficialLanguage("Portuguese");
 
 const moreLocales = getLocalesByOfficialLanguage(["English", "Spanish"]);
 ```
 
-### [getLocaleByRegion](https://marcelovicentegc.github.io/i18n-iso-languages/#getLocaleByRegion)
+### [getLocaleByRegion](https://vtex.github.io/i18n-iso-languages/#getLocaleByRegion)
 
 Get a single or multiple locale objects by region.
 
 ```tsx
-import { getlocaleByRegion } from `@marcelovicentegc/i18n-iso-languages`;
+import { getlocaleByRegion } from `@vtex/i18n-iso`;
 
 const locale = getlocaleByRegion("Austria");
 
@@ -158,7 +156,7 @@ const locales = getLocaleByRegion(["Austria", "South Korea"]);
 Get a single or multiple locale objects by its [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code.
 
 ```tsx
-import { getLocaleByISO31661Alpha2 } from `@marcelovicentegc/i18n-iso-languages`;
+import { getLocaleByISO31661Alpha2 } from `@vtex/i18n-iso`;
 
 const locale = getLocaleByISO31661Alpha2("IT");
 
@@ -170,13 +168,13 @@ const locales = getLocaleByISO31661Alpha2(["IT", "EG", "RO"]);
 Get a single or multiple locale objects by [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ```tsx
-import { getLocalesByISO6391 } from `@marcelovicentegc/i18n-iso-languages`;
+import { getLocalesByISO6391 } from `@vtex/i18n-iso`;
 
 const locales = getLocalesByISO6391("pt"); // returns both Brazilian Portuguese and Portuguese.
 const moreLocales = getLocalesByISO6391(["fr", "en", "pt"]);
 ```
 
-### [configure](https://marcelovicentegc.github.io/i18n-iso-languages/#configure)
+### [configure](https://vtex.github.io/i18n-iso-languages/#configure)
 
 You should use this method if you're willing to override some default behavior, specifically the locales made available and the default locale to be used as a fallback if any of the methods don't find the locales being queried.
 
@@ -186,10 +184,10 @@ By default, every locale on this library is made available by the `getLocales` m
 
 #### Parameters
 
-| Parameter                  | Type                                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Defaults to                                                                                                            |
-| -------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `localesSubset` (optional) | `{ lookupKey: LocaleKey, locales: string[] }` | An object containing a lookup key and a list containing the strings of the subset you want to be used. The search will run against the strings by the lookup key. You can use this to limit the locales objects that should be exposed.                                                                                                                                                                                                                                                             | [Every locale object present on this package](https://github.com/marcelovicentegc/i18n-iso-languages#language-support) |
-| `defaultLocale` (optional) | `{ lookupKey: LocaleKey, locale: string }`    | An object containing a lookup key and a single string representing the default locale to be used when the `tryFallback` parameter is passed to any other method. The search will run against the string by the lookup key. You can use this to tell `i18n-iso-languages`: hey, if you don't find this locale for any reason, return X one instead. This is useful if you're interacting with third party services that might not always give you as input a valid ISO or language for your project. | The English (U.S.A.) locale                                                                                            |
+| Parameter                  | Type                                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Defaults to                                                                                      |
+| -------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `localesSubset` (optional) | `{ lookupKey: LocaleKey, locales: string[] }` | An object containing a lookup key and a list containing the strings of the subset you want to be used. The search will run against the strings by the lookup key. You can use this to limit the locales objects that should be exposed.                                                                                                                                                                                                                                                             | [Every locale object present on this package](https://github.com/vtex/i18n-iso#language-support) |
+| `defaultLocale` (optional) | `{ lookupKey: LocaleKey, locale: string }`    | An object containing a lookup key and a single string representing the default locale to be used when the `tryFallback` parameter is passed to any other method. The search will run against the string by the lookup key. You can use this to tell `i18n-iso-languages`: hey, if you don't find this locale for any reason, return X one instead. This is useful if you're interacting with third party services that might not always give you as input a valid ISO or language for your project. | The English (U.S.A.) locale                                                                      |
 
 **Note**: When you don't define a locales subset, every locale defined on this lib is used.
 
@@ -210,7 +208,7 @@ The `LocaleKey` type is a union type of the following keywords:
 **Configuring a locale fallback in case any of the methods find a given locale on it's locales set or subset**
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   defaultLocale: {
@@ -220,7 +218,7 @@ configure({
 });
 
 // On other files...
-import { getLocaleByISO3166Alpha3 } from "@marcelovicentegc/i18n-iso-languages";
+import { getLocaleByISO3166Alpha3 } from "@vtex/i18n-iso";
 
 // This returns undefined, as there is no such
 // NON-EXSITENT-CODE under the ISO 3166-1 alpha-3 standard,
@@ -236,7 +234,7 @@ const fallback = getLocaleByISO3166Alpha3("NON-EXISTENT-CODE", {
 **Configuring a subset of locales by the IETF language tag pattern**
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   localesSubset: {
@@ -246,10 +244,7 @@ configure({
 });
 
 // On other files...
-import {
-  getLocales,
-  getLocaleByISO3166Alpha2,
-} from "@marcelovicentegc/i18n-iso-languages";
+import { getLocales, getLocaleByISO3166Alpha2 } from "@vtex/i18n-iso";
 
 const locales = getLocales();
 // There are 4 locale objects on the array above.
@@ -270,7 +265,7 @@ const maybeJapaneseLocales = getLocaleByISO3166Alpha2("JP", {
 **Configuring a subset of locales by the ISO 3166-1 alpha-3 standard**
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   localesSubset: {
@@ -280,7 +275,7 @@ configure({
 });
 
 // On other files...
-import { getLocales } from "@marcelovicentegc/i18n-iso-languages";
+import { getLocales } from "@vtex/i18n-iso";
 const locales = getLocales();
 // There are 3 locale objects on the array above.
 ```
@@ -288,7 +283,7 @@ const locales = getLocales();
 **Configuring a subset of locales by the ISO 639-2 standard**
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   localesSubset: {
@@ -298,7 +293,7 @@ configure({
 });
 
 // On other files...
-import { getLocales } from "@marcelovicentegc/i18n-iso-languages";
+import { getLocales } from "@vtex/i18n-iso";
 const locales = getLocales();
 // Every spanish and arabic locale objects are included on the array above.
 ```
@@ -306,7 +301,7 @@ const locales = getLocales();
 **Configuring a subset of locales by the ISO 639-2 standard**
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   localesSubset: {
@@ -316,13 +311,13 @@ configure({
 });
 
 // On other files...
-import { getLocales } from "@marcelovicentegc/i18n-iso-languages";
+import { getLocales } from "@vtex/i18n-iso";
 const locales = getLocales();
 // Every portuguese, english and chinese locale objects are included on the array above.
 ```
 
 ```tsx
-import { configure } from "@marcelovicentegc/i18n-iso-languages";
+import { configure } from "@vtex/i18n-iso";
 
 configure({
   localesSubset: {
@@ -332,7 +327,7 @@ configure({
 });
 
 // On other files...
-import { getLocales } from "@marcelovicentegc/i18n-iso-languages";
+import { getLocales } from "@vtex/i18n-iso";
 const locales = getLocales();
 // Every portuguese, english and chinese locale objects are included on the array above.
 ```

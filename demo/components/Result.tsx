@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Locale } from "@marcelovicentegc/i18n-iso-languages";
+import { Locale } from "@vtex/i18n-iso";
 import { Separator } from "./Separator";
 
 interface ResultProps {

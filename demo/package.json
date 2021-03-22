@@ -1,5 +1,5 @@
 {
-  "name": "@marcelovicentegc/i18n-iso-languages-demo",
+  "name": "@vtex/i18n-iso-demo",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@marcelovicentegc/i18n-iso-languages": "^0.8.0",
+    "@vtex/i18n-iso": "^0.13.0",
     "next": "^10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",

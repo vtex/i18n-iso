@@ -10,7 +10,7 @@ import {
   Locale,
   getLocalesByOfficialLanguage,
   getLocaleByRegion,
-} from "@marcelovicentegc/i18n-iso-languages";
+} from "@vtex/i18n-iso";
 import { ToastContainer, toast } from "react-toastify";
 import { Card } from "../components/Card";
 import { Input } from "../components/Input";
@@ -294,7 +294,7 @@ export default function Home() {
   };
 
   const configureCode = `
-import { configure } from '@marcelovicentegc/i18n-iso-languages'
+import { configure } from '@vtex/i18n-iso'
                 
 configure({
   localesSubset: {
@@ -305,7 +305,7 @@ configure({
 `;
 
   const getLocalesCode = `
-import { getLocales } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocales } from '@vtex/i18n-iso'
                 
 const locales = getLocales()
   
@@ -331,39 +331,39 @@ locales.map((locale) => {
 `;
 
   const singleLocaleByLanguageTagCode = `
-import { getLocaleByIETFLanguageTag, Locale } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocaleByIETFLanguageTag, Locale } from '@vtex/i18n-iso'
                 
 const locale = getLocaleByIETFLanguageTag('${singleLocaleByLanguageTagQuery}') as Locale
                 `;
 
   const multipleLocalesByLanguageTagCode = `
-import { getLocaleByIETFLanguageTag, Locale } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocaleByIETFLanguageTag, Locale } from '@vtex/i18n-iso'
                 
 const locales = getLocaleByIETFLanguageTag([${multipleLocalesByLanguageTagQuery.map(
     (locale) => `'${locale}'`
   )}]) as Locale[]`;
 
   const singleLocaleByOfficialLanguageCode = `
-import { getLocalesByOfficialLanguage } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocalesByOfficialLanguage } from '@vtex/i18n-iso'
                 
 const locales = getLocalesByOfficialLanguage('${singleLocaleByOfficialLanguageQuery}')
                 `;
 
   const multipleLocalesByOfficialLanguageCode = `
-import { getLocalesByOfficialLanguage } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocalesByOfficialLanguage } from '@vtex/i18n-iso'
                 
 const locales = getLocalesByOfficialLanguage([${multipleLocalesByOfficialLanguageQuery.map(
     (locale) => `'${locale}'`
   )}])`;
 
   const singleLocaleByRegionCode = `
-import { getLocaleByRegion } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocaleByRegion } from '@vtex/i18n-iso'
                 
 const locales = getLocaleByRegion('${singleLocaleByRegionQuery}')
                 `;
 
   const multipleLocalesByRegionCode = `
-import { getLocaleByRegion, Locale } from '@marcelovicentegc/i18n-iso-languages'
+import { getLocaleByRegion, Locale } from '@vtex/i18n-iso'
                   
 const locales = getLocaleByRegion([${multipleLocalesByRegionQuery.map(
     (locale) => `'${locale}'`
@@ -372,17 +372,17 @@ const locales = getLocaleByRegion([${multipleLocalesByRegionQuery.map(
   return (
     <div className="container">
       <Head>
-        <title>i18n-iso-languages</title>
+        <title>i18n-iso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">i18n-iso-languages</h1>
+        <h1 className="title">i18n-iso</h1>
         <p className="description">Get started by adding it to your project </p>
         <div className="codeBlockContainer">
           <CodeBlock>
-            yarn add @marcelovicentegc/i18n-iso-languages <br />
-            npm i @marcelovicentegc/i18n-iso-language
+            yarn add @vtex/i18n-iso <br />
+            npm i @vtex/i18n-iso
           </CodeBlock>
         </div>
         <div className="grid">
@@ -644,11 +644,11 @@ const locales = getLocaleByRegion([${multipleLocalesByRegionQuery.map(
 
       <footer>
         <a
-          href="https://github.com/marcelovicentegc/i18n-iso-languages"
+          href="https://github.com/vtex/i18n-iso"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Brought to you with ❤️ by Marcelo Cardoso
+          Brought to you with ❤️ by VTEX
         </a>
       </footer>
 

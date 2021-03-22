@@ -1,6 +1,6 @@
 import React, { Fragment, ReactNode, SyntheticEvent, useState } from "react";
 import Link from "next/link";
-import { Locale } from "@marcelovicentegc/i18n-iso-languages";
+import { Locale } from "@vtex/i18n-iso";
 import { CodeBlock } from "./CodeBlock";
 import { Collapsible } from "./Collapsible";
 import { Result } from "./Result";
