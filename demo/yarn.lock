@@ -203,11 +203,6 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.0.tgz#6c9eafc78c1529248f8f4d92b0799a712b6052c6"
   integrity sha512-i9YbZPN3QgfighY/1X1Pu118VUz2Fmmhd6b2n0/O8YVgGGfw0FbUYoA97k7FkpGJ+pLCFEDLUmAPPV4D1kpeFw==
 
-"@vtex/i18n-iso@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@vtex/i18n-iso/-/i18n-iso-languages-0.8.0.tgz#4ada64fbf957f904627891288d1103efd8792f40"
-  integrity sha512-0stH6BFVZ/+uMGcM0AbhKR+1hWaycbaIPYAp0Kdyi2XWbt6JiQve9lnlr9SWijcx8kS+H1FeyZnG+WNV50+IIg==
-
 "@next/env@10.0.2":
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.2.tgz#b0479a0d4d962f9f85a577298cee260c310dfa3f"
@@ -292,6 +287,11 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@vtex/i18n-iso@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@vtex/i18n-iso/-/i18n-iso-0.13.0.tgz#5e530ca0cf4f5c92c7efe7311e13a40c890eba1f"
+  integrity sha512-1+O6Msmx/jQ1I2dxSDWM3B5Jp+zRRJ3Lgw7m4tSwxesPu//Mc+5CzTwCxeJ+8Mudun8u0vfyfNoqi9HPAFR9hw==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -4347,9 +4347,9 @@ xtend@^4.0.0, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz#95ef94f85ecc81d007c264e190a120f0a3c8566b"
-  integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz#8db2b83c31c5d75099bb890b23f3094891e247d4"
+  integrity sha512-wNcy4NvjMYL8gogWWYAO7ZFWFfHcbdbE57tZO8e4cbpj8tfUcwrwqSl3ad8HxpYWCdXcJUCeKKZS62Av1affwQ==
 
 yallist@^3.0.2:
   version "3.1.1"
