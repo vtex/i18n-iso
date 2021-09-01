@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@vtex/i18n-iso": "^0.13.0",
-    "next": "^10.0.0",
+    "next": "^11.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-select": "^3.1.0",
