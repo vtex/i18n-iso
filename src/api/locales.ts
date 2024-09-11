@@ -587,7 +587,7 @@ export const locales: Locale[] = [
   {
     officialLanguage: "Bulgarian",
     region: "Bulgaria",
-    nativeOfficialLanguage: "български",
+    nativeOfficialLanguage: "Български",
     nativeRegion: "Norge",
     ISO6391: "bg",
     ISO6392: "bul",
