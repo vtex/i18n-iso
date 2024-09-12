@@ -1,6 +1,6 @@
 {
   "name": "@vtex/i18n-iso",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/vtex/i18n-iso",
