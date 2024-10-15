@@ -26,7 +26,7 @@ export const locales: Locale[] = [
   {
     officialLanguage: "English",
     region: "United Kingdom",
-    nativeOfficialLanguage: "English",
+    nativeOfficialLanguage: "English (UK)",
     nativeRegion: "United Kingdom",
     ISO6391: "en",
     ISO6392: "eng",
@@ -588,7 +588,7 @@ export const locales: Locale[] = [
     officialLanguage: "Bulgarian",
     region: "Bulgaria",
     nativeOfficialLanguage: "Български",
-    nativeRegion: "Norge",
+    nativeRegion: "България",
     ISO6391: "bg",
     ISO6392: "bul",
     ISO31661Alpha2: "BG",
@@ -617,7 +617,6 @@ export const locales: Locale[] = [
     ISO31661Alpha3: "AND",
     IETFLanguageTag: "ca-AD",
   },
-
   {
     officialLanguage: "Abkhaz",
     region: "Abkhazia",
@@ -628,5 +627,16 @@ export const locales: Locale[] = [
     ISO31661Alpha2: "AB",
     ISO31661Alpha3: "ABK",
     IETFLanguageTag: "ab-AB",
+  },
+  {
+    officialLanguage: "Polish",
+    region: "Poland",
+    nativeOfficialLanguage: "Polski",
+    nativeRegion: "Polska",
+    ISO6391: "pl",
+    ISO6392: "pol",
+    ISO31661Alpha2: "PL",
+    ISO31661Alpha3: "POL",
+    IETFLanguageTag: "pl-PL",
   },
 ];
